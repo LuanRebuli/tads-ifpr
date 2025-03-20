@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="distanciapossivel"/>
+        <attribute name="authors" value="Aluno"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-03-20 10:11:42 "/>
+        <attribute name="created" value="QWx1bm87TEFCLTAyLTA1OzIwMjUtMDMtMjA7IjEwOjA4OjI2ICI7MjE5Mw=="/>
+        <attribute name="edited" value="QWx1bm87TEFCLTAyLTA1OzIwMjUtMDMtMjA7IjEwOjExOjQyICI7MTsyMjkz"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="consumoMedio, tanqueDisponivel, distanciaPossivel" type="Real" array="False" size=""/>
+            <input variable="consumomedio ="/>
+        </body>
+    </function>
+</flowgorithm>
