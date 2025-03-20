@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="cuboequadrado"/>
+        <attribute name="authors" value="Aluno"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-03-20 10:01:06 "/>
+        <attribute name="created" value="QWx1bm87TEFCLTAyLTA1OzIwMjUtMDMtMjA7IjA5OjU0OjQ0ICI7MjIwMg=="/>
+        <attribute name="edited" value="QWx1bm87TEFCLTAyLTA1OzIwMjUtMDMtMjA7IjEwOjAxOjA2ICI7MTsyMjky"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="a, cubo, quadrado" type="Integer" array="False" size=""/>
+            <input variable="a"/>
+            <assign variable="quadrado" expression="a^2"/>
+            <assign variable="cubo" expression="a^3"/>
+            <output expression="quadrado" newline="True"/>
+            <output expression="cubo" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
