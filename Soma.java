@@ -5,7 +5,7 @@ public class Soma {
     public static void main(String[] args) {
         
         Scanner teclado = new Scanner(System.in);
-        int a, b;
+        int a, b, soma;
         
 
         System.out.println("Soma de dois valores!");
@@ -14,7 +14,7 @@ public class Soma {
         System.out.println("Digite um valor para b");
         b = teclado.nextInt();
 
-        int soma = a + b;
+        soma = a + b;
         System.out.println("O valor da soma é: " + soma);
     }
 }
