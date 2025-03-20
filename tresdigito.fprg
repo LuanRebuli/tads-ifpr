@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="teste"/>
+        <attribute name="authors" value="Aluno"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-03-20 11:08:27 "/>
+        <attribute name="created" value="QWx1bm87TEFCLTAyLTA1OzIwMjUtMDMtMjA7IjEwOjIzOjQzICI7MjE4OQ=="/>
+        <attribute name="edited" value="QWx1bm87TEFCLTAyLTA1OzIwMjUtMDMtMjA7IjExOjA4OjI3ICI7MjsyMzA0"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="numero, x1, x2, x3, x4, resultado" type="Integer" array="False" size=""/>
+            <input variable="numero"/>
+            <if expression="numero&gt;99">
+                <then>
+                    <if expression="numero&lt;=999">
+                        <then>
+                            <assign variable="x1" expression="numero/100"/>
+                            <assign variable="x2" expression="numero%100"/>
+                            <assign variable="x3" expression="x2/10"/>
+                            <assign variable="x4" expression="x2%10"/>
+                            <assign variable="resultado" expression="x1 + x3 + x4"/>
+                            <output expression="x1" newline="True"/>
+                            <output expression="x3" newline="True"/>
+                            <output expression="x4" newline="True"/>
+                            <output expression="resultado" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;digite um numero de 3 digitos&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <output expression="&quot;digite um numero de 3 digitos&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
