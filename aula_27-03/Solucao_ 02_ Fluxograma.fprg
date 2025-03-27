@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="teste"/>
+        <attribute name="authors" value="Aluno"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-03-27 08:31:24 "/>
+        <attribute name="created" value="QWx1bm87TEFCLTAyLTA1OzIwMjUtMDMtMjA7IjEwOjIzOjQzICI7MjE4OQ=="/>
+        <attribute name="edited" value="QWx1bm87TEFCLTAyLTA1OzIwMjUtMDMtMjc7IjA4OjMxOjI0ICI7NTsyMzEz"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="numero, unidade, dezena, centena, resultado" type="Integer" array="False" size=""/>
+            <input variable="numero"/>
+            <if expression="numero&gt;99">
+                <then>
+                    <if expression="numero&lt;=999">
+                        <then>
+                            <assign variable="centena" expression="numero/100"/>
+                            <assign variable="dezena" expression="numero%100"/>
+                            <assign variable="dezena" expression="dezena/10"/>
+                            <assign variable="unidade" expression="numero%10"/>
+                            <assign variable="resultado" expression="unidade * 100 + dezena * 10 + centena"/>
+                            <output expression="resultado" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;digite um numero de 3 digitos&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <output expression="&quot;digite um numero de 3 digitos&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
