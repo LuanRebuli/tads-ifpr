@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Solucao_ 03_ Fluxograma"/>
+        <attribute name="authors" value="Aluno"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-03-27 08:47:03 "/>
+        <attribute name="created" value="QWx1bm87TEFCLTAyLTA1OzIwMjUtMDMtMjc7IjA4OjQzOjQzICI7MjIwNQ=="/>
+        <attribute name="edited" value="QWx1bm87TEFCLTAyLTA1OzIwMjUtMDMtMjc7IjA4OjQ3OjAzICI7MTsyMzEz"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="lado, altura, areadolosango" type="Integer" array="False" size=""/>
+            <input variable="lado"/>
+            <input variable="altura"/>
+            <assign variable="areadolosango" expression="lado*altura"/>
+            <output expression="areadolosango" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
