@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Solucao_ 07_ Fluxograma"/>
+        <attribute name="authors" value="Aluno"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-03-27 10:40:24 "/>
+        <attribute name="created" value="QWx1bm87TEFCLTAyLTA1OzIwMjUtMDMtMjc7IjEwOjMyOjIyICI7MjE5Mw=="/>
+        <attribute name="edited" value="QWx1bm87TEFCLTAyLTA1OzIwMjUtMDMtMjc7IjEwOjQwOjI0ICI7MTsyMzAy"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="hora, minutosTotais, horasTotais" type="Integer" array="False" size=""/>
+            <input variable="hora"/>
+            <if expression="hora &lt;=23">
+                <then>
+                    <assign variable="minutosTotais" expression="hora * 60"/>
+                    <output expression="minutosTotais" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;Digite entre 0 e 23&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Solucao_ 06_ Fluxograma"/>
+        <attribute name="authors" value="Aluno"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-03-27 10:32:20 "/>
+        <attribute name="created" value="QWx1bm87TEFCLTAyLTA1OzIwMjUtMDMtMjc7IjA5OjU1OjU4ICI7MjIxNQ=="/>
+        <attribute name="edited" value="QWx1bm87TEFCLTAyLTA1OzIwMjUtMDMtMjc7IjEwOjMyOjIwICI7MjsyMzAw"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="valorHoraAula, numerosDeAulasMensal, salarioBruto, salarioLiquido, descontoINSS" type="Integer" array="False" size=""/>
+            <output expression="&quot;Digite o valor da hora da aula&quot;" newline="True"/>
+            <input variable="valorHoraAula"/>
+            <output expression="&quot;Digite o numeros de aulas mensais&quot;" newline="True"/>
+            <input variable="numerosDeAulasMensal"/>
+            <assign variable="salarioBruto" expression="valorHoraAula*numerosDeAulasMensal"/>
+            <if expression="salarioBruto&lt;1.302">
+                <then>
+                    <assign variable="descontoINSS" expression="salarioBruto * 0.075"/>
+                    <assign variable="salarioLiquido" expression="salarioBruto - descontoINSS"/>
+                    <output expression="salarioLiquido" newline="True"/>
+                </then>
+                <else>
+                    <if expression="salarioBruto&lt;2571">
+                        <then>
+                            <assign variable="descontoINSS" expression="salarioBruto * 0.085"/>
+                            <assign variable="salarioLiquido" expression="salarioBruto - descontoINSS"/>
+                            <output expression="salarioLiquido" newline="True"/>
+                        </then>
+                        <else>
+                            <if expression="salarioBruto&lt;3856">
+                                <then>
+                                    <assign variable="descontoINSS" expression="salarioBruto * 0.105"/>
+                                    <assign variable="salarioLiquido" expression="salarioBruto - descontoINSS"/>
+                                    <output expression="salarioLiquido" newline="True"/>
+                                </then>
+                                <else>
+                                    <assign variable="descontoINSS" expression="salarioBruto * 0.125"/>
+                                    <assign variable="salarioLiquido" expression="salarioBruto - descontoINSS"/>
+                                    <output expression="salarioliquido" newline="True"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

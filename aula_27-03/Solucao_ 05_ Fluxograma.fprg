@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Solucao_ 04_ Fluxograma"/>
+        <attribute name="authors" value="Aluno"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-03-27 09:47:55 "/>
+        <attribute name="created" value="QWx1bm87TEFCLTAyLTA1OzIwMjUtMDMtMjc7IjA4OjUyOjMxICI7MjIwMg=="/>
+        <attribute name="edited" value="QWx1bm87TEFCLTAyLTA1OzIwMjUtMDMtMjc7IjA5OjQ3OjU1ICI7MjsyMzIy"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="resultadoDecimoTermo, termo1, razao, termoCalcular" type="Integer" array="False" size=""/>
+            <assign variable="termoCalcular" expression="10"/>
+            <input variable="termo1"/>
+            <input variable="razao"/>
+            <assign variable="resultadoDecimoTermo" expression="termo1 * razao^(10-1)"/>
+            <output expression="resultadoDecimoTermo" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
