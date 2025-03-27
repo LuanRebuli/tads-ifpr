@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Solucao_ 01_ Fluxograma"/>
+        <attribute name="authors" value="Aluno"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-03-27 08:00:54 "/>
+        <attribute name="created" value="QWx1bm87TEFCLTAyLTA1OzIwMjUtMDMtMjc7IjA3OjUwOjUzICI7MjIwMw=="/>
+        <attribute name="edited" value="QWx1bm87TEFCLTAyLTA1OzIwMjUtMDMtMjc7IjA4OjAwOjU0ICI7MTsyMzA4"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="resultadomedia, x1, x2, x3, x4, p1, p2, p3, p4" type="Integer" array="False" size=""/>
+            <input variable="x1"/>
+            <input variable="x2"/>
+            <input variable="x3"/>
+            <input variable="x4"/>
+            <assign variable="p1" expression="1"/>
+            <assign variable="p2" expression="2"/>
+            <assign variable="p3" expression="3"/>
+            <assign variable="p4" expression="4"/>
+            <assign variable="resultadomedia" expression="(((x1*p1)+(x2*p2)+(x3*p3)+(x4*p4))/(p1+p2+p3+p4))"/>
+            <output expression="resultadomedia" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
