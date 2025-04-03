@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Solucao_ 03_ Fluxograma"/>
+        <attribute name="authors" value="Aluno"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-04-03 09:54:57 "/>
+        <attribute name="created" value="QWx1bm87TEFCLTAyLTA1OzIwMjUtMDQtMDM7IjA5OjAwOjQwICI7MjE5MQ=="/>
+        <attribute name="edited" value="QWx1bm87TEFCLTAyLTA1OzIwMjUtMDQtMDM7IjA5OjU0OjU3ICI7MjsyMzE3"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="number, divisao" type="Integer" array="False" size=""/>
+            <output expression="&quot;Digite um numero inteiro!&quot;" newline="True"/>
+            <input variable="number"/>
+            <assign variable="divisao" expression="number % 2"/>
+            <if expression="divisao == 0">
+                <then>
+                    <output expression="&quot;O numero &#233; par!&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;O numero &#233; impar!&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

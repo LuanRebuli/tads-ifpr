@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Solucao_ 04_ Fluxograma"/>
+        <attribute name="authors" value="Aluno"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-04-03 09:59:47 "/>
+        <attribute name="created" value="QWx1bm87TEFCLTAyLTA1OzIwMjUtMDQtMDM7IjA5OjQyOjQ5ICI7MjIwNg=="/>
+        <attribute name="edited" value="QWx1bm87TEFCLTAyLTA1OzIwMjUtMDQtMDM7IjA5OjU5OjQ3ICI7MzsyMzIy"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="age" type="Integer" array="False" size=""/>
+            <output expression="&quot;Digite uma idade!&quot;" newline="True"/>
+            <input variable="age"/>
+            <if expression="age&lt;=0">
+                <then>
+                    <output expression="&quot;Idade inv&#225;lida&quot;" newline="True"/>
+                </then>
+                <else>
+                    <if expression="age &lt;=11">
+                        <then>
+                            <output expression="&quot;Essa pessoa est&#225; faixa et&#225;ria de: Crian&#231;a&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <if expression="age&lt;=17">
+                                <then>
+                                    <output expression="&quot;Essa pessoa est&#225; faixa et&#225;ria de: Adolescente&quot;" newline="True"/>
+                                </then>
+                                <else>
+                                    <if expression="age &lt;= 59">
+                                        <then>
+                                            <output expression="&quot;Essa pessoa est&#225; faixa et&#225;ria de: Adulto&quot;" newline="True"/>
+                                        </then>
+                                        <else>
+                                            <output expression="&quot;Essa pessoa est&#225; faixa et&#225;ria de: Idoso&quot;" newline="True"/>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Solucao_ 05_ Fluxograma"/>
+        <attribute name="authors" value="Aluno"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-04-03 10:20:18 "/>
+        <attribute name="created" value="QWx1bm87TEFCLTAyLTA1OzIwMjUtMDQtMDM7IjEwOjAxOjA5ICI7MjE4OQ=="/>
+        <attribute name="edited" value="QWx1bm87TEFCLTAyLTA1OzIwMjUtMDQtMDM7IjEwOjA4OjA2ICI7NztBbHVubztMQUItMDItMDU7MjAyNS0wMy0yMDsiMTA6MjM6NDMgIjt0cmVzZGlnaXRvLmZwcmc7NjE3Nw=="/>
+        <attribute name="edited" value="QWx1bm87TEFCLTAyLTA1OzIwMjUtMDQtMDM7IjEwOjIwOjE4ICI7MTsyMjk4"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="number, x1, x2, x3, x4" type="Integer" array="False" size=""/>
+            <output expression="&quot;Digite um numero inteiro de 3 digitos! Calcular qual o triangulo. (exemplo: triangulo equilatero de 4x4x4 = 444)&quot;" newline="True"/>
+            <input variable="number"/>
+            <if expression="number &gt; 99">
+                <then>
+                    <if expression="number &lt;=999">
+                        <then>
+                            <assign variable="x1" expression="number/100"/>
+                            <assign variable="x2" expression="number%100"/>
+                            <assign variable="x3" expression="x2/10"/>
+                            <assign variable="x4" expression="x2%10"/>
+                            <if expression="x1 == x3">
+                                <then>
+                                    <if expression="x1 == x4">
+                                        <then>
+                                            <output expression="&quot;&#201; um Triangulo Equil&#225;tero&quot;" newline="True"/>
+                                        </then>
+                                        <else>
+                                            <output expression="&quot;&#201; um Triangulo Is&#243;scele&quot;" newline="True"/>
+                                        </else>
+                                    </if>
+                                </then>
+                                <else>
+                                    <if expression="x1 == x4">
+                                        <then>
+                                            <output expression="&quot;&#201; um Triangulo Is&#243;scele&quot;" newline="True"/>
+                                        </then>
+                                        <else>
+                                            <if expression="x3 == x4">
+                                                <then>
+                                                    <output expression="&quot;&#201; um Triangulo Is&#243;scele&quot;" newline="True"/>
+                                                </then>
+                                                <else>
+                                                    <output expression="&quot;&#201; um Triangulo Escaleno&quot;" newline="True"/>
+                                                </else>
+                                            </if>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </then>
+                        <else>
+                            <output expression="&quot;Digite um numero com 3 digitos!&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <output expression="&quot;Digite um numero com 3 digitos!&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
