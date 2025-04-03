@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Solucao_ 01_ Fluxograma"/>
+        <attribute name="authors" value="Aluno"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-04-03 08:26:52 "/>
+        <attribute name="created" value="QWx1bm87TEFCLTAyLTA1OzIwMjUtMDQtMDM7IjA4OjExOjQ1ICI7MjE5Nw=="/>
+        <attribute name="edited" value="QWx1bm87TEFCLTAyLTA1OzIwMjUtMDQtMDM7IjA4OjI2OjUyICI7MTsyMzA5"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="number" type="Integer" array="False" size=""/>
+            <output expression="&quot;Digite um numero inteiro:&quot;" newline="True"/>
+            <input variable="number"/>
+            <if expression="number &lt; 0">
+                <then>
+                    <output expression="&quot;O numero &#233; negativo&quot;" newline="True"/>
+                </then>
+                <else>
+                    <if expression="number &gt; 1">
+                        <then>
+                            <output expression="&quot;O numero &#233; positivo.&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;O numero &#233; neutro&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

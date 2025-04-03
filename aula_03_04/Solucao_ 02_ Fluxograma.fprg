@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Solucao_ 02_ Fluxograma"/>
+        <attribute name="authors" value="Aluno"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-04-03 08:45:15 "/>
+        <attribute name="created" value="QWx1bm87TEFCLTAyLTA1OzIwMjUtMDQtMDM7IjA4OjI2OjU2ICI7MjIwNQ=="/>
+        <attribute name="edited" value="QWx1bm87TEFCLTAyLTA1OzIwMjUtMDQtMDM7IjA4OjQ1OjE1ICI7MTsyMzA5"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n1, n2, n3, max, min" type="Integer" array="False" size=""/>
+            <output expression="&quot;Digite um numero inteiro&quot;" newline="True"/>
+            <input variable="n1"/>
+            <output expression="&quot;Digite um numero inteiro&quot;" newline="True"/>
+            <input variable="n2"/>
+            <output expression="&quot;Digite um numero inteiro&quot;" newline="True"/>
+            <input variable="n3"/>
+            <if expression="n1 &gt; n2">
+                <then>
+                    <if expression="n1 &gt; n3">
+                        <then>
+                            <assign variable="max" expression="n1"/>
+                            <if expression="n2 &gt; n3">
+                                <then>
+                                    <assign variable="min" expression="n3"/>
+                                </then>
+                                <else>
+                                    <assign variable="min" expression="n2"/>
+                                </else>
+                            </if>
+                        </then>
+                        <else>
+                            <assign variable="max" expression="n3"/>
+                            <assign variable="min" expression="n2"/>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <if expression="n2 &gt; n3">
+                        <then>
+                            <assign variable="max" expression="n2"/>
+                            <if expression="n1 &gt; n3">
+                                <then>
+                                    <assign variable="min" expression="n3"/>
+                                </then>
+                                <else>
+                                    <assign variable="min" expression="n1"/>
+                                </else>
+                            </if>
+                        </then>
+                        <else>
+                            <assign variable="max" expression="n3"/>
+                            <assign variable="min" expression="n1"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <output expression="&quot;O maior numero &#233;&quot;" newline="True"/>
+            <output expression="max" newline="True"/>
+            <output expression="&quot;O menor numero &#233;&quot;" newline="True"/>
+            <output expression="min" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,7 +1,5 @@
 import java.util.Scanner;
 
-import javax.swing.plaf.basic.BasicInternalFrameTitlePane.SystemMenuBar;
-
 public class Solucao_01_Java {
     public static void main(String[] args) {
         int resultadomedia, x1, x2, x3, x4, p1, p2, p3, p4;
