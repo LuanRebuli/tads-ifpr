@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Solucao_01_Flowgorithm"/>
+        <attribute name="authors" value="Aluno"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-04-24 09:56:21 "/>
+        <attribute name="created" value="QWx1bm87TEFCLTAyLTA1OzIwMjUtMDQtMjQ7IjA3OjU1OjM5ICI7MjIxMA=="/>
+        <attribute name="edited" value="QWx1bm87TEFCLTAyLTA1OzIwMjUtMDQtMjQ7IjA5OjU2OjIxICI7MTsyMzEy"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="numerosDoze, numerosTrintaEcinco, pares" type="Integer" array="True" size="12"/>
+            <declare name="i, n, contadorVinteQuarenta, contadorTrintaEcinco" type="Integer" array="False" size=""/>
+            <assign variable="contadorTrintaEcinco" expression="0"/>
+            <assign variable="contadorVinteQuarenta" expression="0"/>
+            <assign variable="i" expression="0"/>
+            <assign variable="n" expression="0"/>
+            <for variable="i" start="0" end="11" direction="inc" step="1">
+                <assign variable="numerosDoze[i]" expression="Random(41) + 10"/>
+                <output expression="numerosDoze[i] &amp; &quot; &quot;" newline="False"/>
+                <if expression="numerosDoze[i] &gt;= 20 &amp;&amp; numerosDoze[i] &lt;= 40">
+                    <then>
+                        <assign variable="contadorVinteQuarenta" expression="contadorVinteQuarenta + 1"/>
+                    </then>
+                    <else/>
+                </if>
+                <if expression="numerosDoze[i] &gt;= 35">
+                    <then>
+                        <assign variable="contadorTrintaEcinco" expression="contadorTrintaEcinco + 1"/>
+                    </then>
+                    <else/>
+                </if>
+                <if expression="numerosDoze[i] % 2 = 0">
+                    <then>
+                        <assign variable="pares[i]" expression="numerosDoze[i]"/>
+                    </then>
+                    <else>
+                        <assign variable="pares[i]" expression="0"/>
+                    </else>
+                </if>
+            </for>
+            <output expression="&quot;&quot;" newline="True"/>
+            <output expression="&quot;Numeros Pares:&quot;" newline="False"/>
+            <for variable="i" start="0" end="11" direction="inc" step="1">
+                <if expression="pares[i] != 0">
+                    <then>
+                        <output expression="pares[i] &amp; &quot; &quot;" newline="False"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <output expression="&quot; &quot;" newline="True"/>
+            <output expression="&quot;Os numeros entre 20 a 40 s&#227;o: &quot; &amp; contadorVinteQuarenta" newline="True"/>
+            <output expression="&quot;Os numeros maiores que 35 s&#227;o: &quot; &amp; contadorTrintaEcinco" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
