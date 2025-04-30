@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Solucao_ 03_Fluxograma"/>
+        <attribute name="authors" value="Luan"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-04-30 01:33:47 "/>
+        <attribute name="created" value="THVhbjtERVNLVE9QLU9RNFBERzI7MjAyNS0wNC0zMDsiMDE6Mjk6MTIgIjsyNjUw"/>
+        <attribute name="edited" value="THVhbjtERVNLVE9QLU9RNFBERzI7MjAyNS0wNC0zMDsiMDE6MzM6NDcgIjsxOzI3NjE="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="vetor" type="Integer" array="True" size="4"/>
+            <declare name="soma, i" type="Integer" array="False" size=""/>
+            <declare name="media" type="Real" array="False" size=""/>
+            <assign variable="soma" expression="0"/>
+            <output expression="&quot;Vetor Aleat&#243;rio:&quot;" newline="False"/>
+            <for variable="i" start="0" end="3" direction="inc" step="1">
+                <assign variable="vetor[i]" expression="10 + random(99)"/>
+                <output expression="vetor[i] &amp; &quot; &quot;" newline="False"/>
+                <assign variable="soma" expression="soma + vetor[i]"/>
+            </for>
+            <assign variable="media" expression="soma / 4"/>
+            <output expression="&quot;- Valor m&#233;dio: &quot; &amp; media" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

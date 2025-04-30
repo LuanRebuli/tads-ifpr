@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Vetor Aleat&#243;rio"/>
+        <attribute name="authors" value=""/>
+        <attribute name="about" value="Algoritmo para identificar maior e menor elemento de um vetor"/>
+        <attribute name="saved" value="2025-04-30 01:29:09 "/>
+        <attribute name="created" value="2025-04-30 01:16:18"/>
+        <attribute name="edited" value="2025-04-30 01:16:41"/>
+        <attribute name="edited" value="THVhbjtERVNLVE9QLU9RNFBERzI7MjAyNS0wNC0zMDsiMDE6Mjk6MDkgIjsyOzI3NjU="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="vetor" type="Integer" array="True" size="12"/>
+            <declare name="maior, menor, posMaior, posMenor, i" type="Integer" array="False" size=""/>
+            <output expression="&quot;Vetor Aleat&#243;rio:&quot;" newline="False"/>
+            <for variable="i" start="0" end="11" direction="inc" step="1">
+                <assign variable="vetor[i]" expression="10 + random(90)"/>
+                <output expression="vetor[i] &amp; &quot; &quot;" newline="False"/>
+            </for>
+            <assign variable="maior" expression="vetor[0]"/>
+            <assign variable="menor" expression="vetor[0]"/>
+            <assign variable="posMaior" expression="0"/>
+            <assign variable="posMenor" expression="0"/>
+            <for variable="i" start="1" end="11" direction="inc" step="1">
+                <if expression="vetor[i] &gt; maior">
+                    <then>
+                        <assign variable="maior" expression="vetor[i]"/>
+                        <assign variable="posMaior" expression="i"/>
+                    </then>
+                    <else/>
+                </if>
+                <if expression="vetor[i] &lt; menor">
+                    <then>
+                        <assign variable="menor" expression="vetor[i]"/>
+                        <assign variable="posMenor" expression="i"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <output expression="&quot;Maior elemento: &quot; &amp; maior &amp; &quot; / Posi&#231;&#227;o: &quot; &amp; posMaior" newline="True"/>
+            <output expression="&quot;Menor elemento: &quot; &amp; menor &amp; &quot; / Posi&#231;&#227;o: &quot; &amp; posMenor" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
