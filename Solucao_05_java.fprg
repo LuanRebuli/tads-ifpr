@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Solucao_04_java"/>
+        <attribute name="authors" value="mathe"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-05-13 01:27:43 "/>
+        <attribute name="created" value="bWF0aGU7TUFUSEVVU05JVFJPOzIwMjUtMDUtMTM7IjExOjQ1OjE2ICI7MjY0OQ=="/>
+        <attribute name="edited" value="bWF0aGU7TUFUSEVVU05JVFJPOzIwMjUtMDUtMTM7IjAxOjI3OjQzICI7MTsyNzU2"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="v1" type="Integer" array="True" size="10"/>
+            <declare name="v2" type="Integer" array="True" size="10"/>
+            <declare name="V" type="Integer" array="True" size="20"/>
+            <declare name="i, b" type="Integer" array="False" size=""/>
+            <for variable="i" start="0" end="9" direction="inc" step="1">
+                <assign variable="v1[i]" expression="random(50)"/>
+                <assign variable="v2[i]" expression="random(50)"/>
+            </for>
+            <output expression="&quot; Vetor A: &quot;" newline="False"/>
+            <for variable="i" start="0" end="9" direction="inc" step="1">
+                <output expression="v1[i] &amp; &quot; &quot;" newline="False"/>
+            </for>
+            <output expression="&quot; &quot;" newline="True"/>
+            <output expression="&quot; Vetor B: &quot;" newline="False"/>
+            <for variable="i" start="0" end="9" direction="inc" step="1">
+                <output expression="v2[i] &amp; &quot; &quot;" newline="False"/>
+            </for>
+            <output expression="&quot; &quot;" newline="True"/>
+            <for variable="i" start="0" end="9" direction="inc" step="1">
+                <assign variable="V[2 * i]" expression="v1[i]"/>
+                <assign variable="V[2 * i + 1]" expression="v2[i]"/>
+            </for>
+            <output expression="&quot;Vetor V: &quot;" newline="False"/>
+            <for variable="i" start="0" end="19" direction="inc" step="1">
+                <output expression="V[i] &amp; &quot; &quot;" newline="False"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

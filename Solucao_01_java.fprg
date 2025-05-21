@@ -1,0 +1,105 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="ex01"/>
+        <attribute name="authors" value="thiago_galvao"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-05-10 04:20:53 PM"/>
+        <attribute name="created" value="dGhpYWdvX2dhbHZhbztBUkNITElOVVgtR0FMVkE7MjAyNS0wNS0wOTswNDoxNDozNCBQTTszNzQy"/>
+        <attribute name="edited" value="dGhpYWdvX2dhbHZhbztBUkNITElOVVgtR0FMVkE7MjAyNS0wNS0xMDswNDoyMDo1MyBQTTszOzM4NDI="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="v1" type="Integer" array="True" size="20"/>
+            <declare name="v2" type="Integer" array="True" size="20"/>
+            <declare name="i, c1, c0, p, num" type="Integer" array="False" size=""/>
+            <declare name="verdade" type="Boolean" array="False" size=""/>
+            <output expression="&quot;Digite n&#250;meros entre 0 e 1: &quot;" newline="True"/>
+            <for variable="i" start="0" end="19" direction="inc" step="1">
+                <assign variable="verdade" expression="True"/>
+                <while expression="verdade == True">
+                    <input variable="num"/>
+                    <if expression="num == 0 or num == 1">
+                        <then>
+                            <assign variable="verdade" expression="False"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;Erro - O n&#250;mero deve ser 0 ou 1, digite novamente, por favor: &quot;" newline="True"/>
+                        </else>
+                    </if>
+                </while>
+                <assign variable="v1[i]" expression="num"/>
+            </for>
+            <for variable="i" start="0" end="19" direction="inc" step="1">
+                <output expression="v1[i] &amp; &quot; &quot;" newline="False"/>
+            </for>
+            <output expression="&quot; &quot;" newline="True"/>
+            <if expression="v1[0] == 1">
+                <then>
+                    <output expression="&quot; 0 &quot;" newline="False"/>
+                </then>
+                <else/>
+            </if>
+            <assign variable="c1" expression="0"/>
+            <assign variable="c0" expression="0"/>
+            <assign variable="p" expression="0"/>
+            <for variable="i" start="0" end="19" direction="inc" step="1">
+                <assign variable="v2[i]" expression="-1"/>
+                <if expression="v1[i] == 1">
+                    <then>
+                        <assign variable="c1" expression="c1 + 1"/>
+                        <if expression="c0 &gt; 0">
+                            <then>
+                                <assign variable="v2[p]" expression="c0"/>
+                                <assign variable="p" expression="p + 1"/>
+                                <assign variable="c0" expression="0"/>
+                            </then>
+                            <else/>
+                        </if>
+                    </then>
+                    <else/>
+                </if>
+                <if expression="v1[i] == 0">
+                    <then>
+                        <assign variable="c0" expression="c0 + 1"/>
+                        <if expression="c1 &gt; 0">
+                            <then>
+                                <assign variable="v2[p]" expression="c1"/>
+                                <assign variable="p" expression="p + 1"/>
+                                <assign variable="c1" expression="0"/>
+                            </then>
+                            <else/>
+                        </if>
+                    </then>
+                    <else/>
+                </if>
+                <if expression="v1[i] == v1[19]">
+                    <then>
+                        <if expression="c0 &gt; 0">
+                            <then>
+                                <assign variable="v2[p]" expression="c0"/>
+                            </then>
+                            <else/>
+                        </if>
+                        <if expression="c1 &gt; 0">
+                            <then>
+                                <assign variable="v2[p]" expression="c1"/>
+                            </then>
+                            <else/>
+                        </if>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <for variable="i" start="0" end="19" direction="inc" step="1">
+                <if expression="v2[i] == -1">
+                    <then/>
+                    <else>
+                        <output expression="v2[i] &amp; &quot; &quot;" newline="False"/>
+                    </else>
+                </if>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

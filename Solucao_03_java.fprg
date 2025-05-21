@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Solucao_03_java"/>
+        <attribute name="authors" value="mathe"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-05-13 03:00:34 "/>
+        <attribute name="created" value="bWF0aGU7TUFUSEVVU05JVFJPOzIwMjUtMDUtMTM7IjAyOjExOjQ5ICI7MjY0OA=="/>
+        <attribute name="edited" value="bWF0aGU7TUFUSEVVU05JVFJPOzIwMjUtMDUtMTM7IjAzOjAwOjM0ICI7MjsyNzUw"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="v1" type="Integer" array="True" size="5"/>
+            <declare name="fatorial" type="Integer" array="True" size="5"/>
+            <declare name="j, i" type="Integer" array="False" size=""/>
+            <assign variable="i" expression="0"/>
+            <for variable="i" start="0" end="4" direction="inc" step="1">
+                <output expression="&quot;Digite um Numero Inteiro&quot;" newline="True"/>
+                <input variable="v1[i]"/>
+                <while expression="v1[i] &lt; 0">
+                    <output expression="v1[i] &amp; &quot; n&#227;o &#233; inteiro &quot;" newline="True"/>
+                    <output expression="&quot; Digite um numero inteiro &quot;" newline="True"/>
+                    <input variable="v1[i]"/>
+                </while>
+            </for>
+            <for variable="i" start="0" end="4" direction="inc" step="1">
+                <assign variable="fatorial[i]" expression="1"/>
+                <assign variable="j" expression="1"/>
+                <while expression="j &lt;= v1[i]">
+                    <assign variable="fatorial[i]" expression="fatorial[i] * j"/>
+                    <assign variable="j" expression="j + 1"/>
+                </while>
+            </for>
+            <output expression="&quot; Fatorias calculadas &quot;" newline="True"/>
+            <for variable="i" start="0" end="4" direction="inc" step="1">
+                <output expression="v1[i] &amp; &quot;! = &quot; &amp; fatorial[i]" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>
