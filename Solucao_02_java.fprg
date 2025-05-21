@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Solucao_02_java"/>
+        <attribute name="authors" value="mathe"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-05-13 11:25:04 "/>
+        <attribute name="created" value="bWF0aGU7TUFUSEVVU05JVFJPOzIwMjUtMDUtMTM7IjA4OjQ5OjExICI7MjY1NA=="/>
+        <attribute name="edited" value="bWF0aGU7TUFUSEVVU05JVFJPOzIwMjUtMDUtMTM7IjA4OjUwOjM1ICI7MTg7bWF0aGU7TUFUSEVVU05JVFJPOzIwMjUtMDUtMTM7IjA3OjM0OjQzICI7NTUyNw=="/>
+        <attribute name="edited" value="bWF0aGU7TUFUSEVVU05JVFJPOzIwMjUtMDUtMTM7IjExOjI1OjA0ICI7MjsyNzUz"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="vetor" type="Integer" array="True" size="10"/>
+            <declare name="c1" type="Integer" array="True" size="10"/>
+            <declare name="d1" type="Integer" array="True" size="10"/>
+            <declare name="i, tamanho, j, temp" type="Integer" array="False" size=""/>
+            <assign variable="tamanho" expression="0"/>
+            <for variable="i" start="0" end="9" direction="inc" step="1">
+                <output expression="&quot;Digite um numero &quot;" newline="True"/>
+                <input variable="vetor[i]"/>
+                <assign variable="c1[i]" expression="vetor[i]"/>
+                <assign variable="d1[i]" expression="vetor[i]"/>
+                <if expression="vetor[i] &lt; 0">
+                    <then>
+                        <output expression="&quot; O programa ser&#225; suspenso por usar numero negativo &quot;" newline="True"/>
+                        <breakpoint expression="" always="True"/>
+                    </then>
+                    <else/>
+                </if>
+                <assign variable="tamanho" expression="tamanho+ 1"/>
+            </for>
+            <output expression="&quot; Vetor Original: &quot;" newline="False"/>
+            <for variable="i" start="0" end="9" direction="inc" step="1">
+                <output expression="&quot; &quot; &amp; vetor[i]" newline="False"/>
+            </for>
+            <output expression="&quot; &quot;" newline="True"/>
+            <for variable="i" start="0" end="tamanho-2" direction="inc" step="1">
+                <for variable="j" start="0" end="tamanho - i - 2" direction="inc" step="1">
+                    <if expression="c1[j] &gt; c1[j + 1]">
+                        <then>
+                            <assign variable="temp" expression="c1[j]"/>
+                            <assign variable="c1[j]" expression="c1[j + 1]"/>
+                            <assign variable="c1[j + 1]" expression="temp"/>
+                        </then>
+                        <else/>
+                    </if>
+                </for>
+            </for>
+            <for variable="i" start="0" end="tamanho - 2" direction="inc" step="1">
+                <for variable="j" start="0" end="tamanho - i - 2" direction="inc" step="1">
+                    <if expression="d1[j] &lt; d1[j + 1]">
+                        <then>
+                            <assign variable="temp" expression="d1[j]"/>
+                            <assign variable="d1[j]" expression="d1[j + 1]"/>
+                            <assign variable="d1[j + 1]" expression="temp"/>
+                        </then>
+                        <else/>
+                    </if>
+                </for>
+            </for>
+            <output expression="&quot; Vetor Crescente &quot;" newline="False"/>
+            <for variable="i" start="0" end="tamanho - 1" direction="inc" step="1">
+                <output expression="c1[i] &amp; &quot; &quot;" newline="False"/>
+            </for>
+            <output expression="&quot; &quot;" newline="True"/>
+            <output expression="&quot; Vetor decrescente &quot;" newline="False"/>
+            <for variable="i" start="0" end="tamanho - 1" direction="inc" step="1">
+                <output expression="d1[i] &amp; &quot; &quot;" newline="False"/>
+            </for>
+            <output expression="&quot; &quot;" newline="True"/>
+            <for variable="i" start="0" end="9" direction="inc" step="1">
+                <if expression="vetor[i] = 4">
+                    <then>
+                        <output expression="&quot; Vetor est&#225; completo, programa suspenso! &quot;" newline="True"/>
+                        <breakpoint expression="" always="True"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+        </body>
+    </function>
+</flowgorithm>
