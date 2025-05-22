@@ -8,17 +8,26 @@ public class Solucao_02_java {
         int[] crescente = new int[10];
         int[] decrescente = new int[10];
         int i, tamanho, j, temp;
+        Boolean entradaValida;
 
         tamanho = 0;
+
+        System.out.println("Digite um numero:");
         for (i = 0; i <= 9; i++) {
-            System.out.println("Digite um numero");
-            numeros[i] = input.nextInt();
-            crescente[i] = numeros[i];
-            decrescente[i] = numeros[i];
-            if (numeros[i] < 0) {
-                System.out.println(" O programa será suspenso por usar numero negativo ");
-            }
+            entradaValida = true;
+            while (entradaValida == true) {
+                numeros[i] = input.nextInt();
+                if (numeros[i] > 0) {
+                    System.out.println("Digite um numero: [" + i + "]");
+                    crescente[i] = numeros[i];
+                    decrescente[i] = numeros[i];
+                    entradaValida = false;
+                }else {
+                    System.out.println("Digite um numero inteiro.");
+                }
             tamanho = tamanho + 1;
+            
+        }
         }
         System.out.print(" Vetor Original: ");
         for (i = 0; i <= 9; i++) {
